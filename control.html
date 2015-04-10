@@ -1,0 +1,199 @@
+
+<!DOCTYPE HTML>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<title>Arduino Yun &bull; Led Slider</title>
+	
+	<script type="text/javascript" src="zepto.min.js"></script>
+
+	<script type="text/javascript">
+
+		var value;
+
+	   	function sendVal1() {		  	
+		  	$.get('/arduino/base/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal1(val1) {
+      		value = val1; 
+      		$("#val1").text(value);
+      		sendVal1();
+    	}	  
+
+
+	   	function sendVal2() {		  	
+		  	$.get('/arduino/spalla/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal2(val2) {
+      		value = val2; 
+      		$("#val2").text(value);
+      		sendVal2();
+    	}	  
+    	
+    	
+      function sendVal3() {		  	
+		  	$.get('/arduino/gomito/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal3(val3) {
+      		value = val3; 
+      		$("#val3").text(value);
+      		sendVal3();
+    	}	  
+    	
+    	
+    function sendVal4() {		  	
+		  	$.get('/arduino/POLSOORIZ/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal4(val4) {
+      		value = val4; 
+      		$("#val4").text(value);
+      		sendVal4();
+    	}	
+    	
+    	
+    function sendVal4() {		  	
+		  	$.get('/arduino/POLSOVERTI/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal5(val5) {
+      		value = val5; 
+      		$("#val5").text(value);
+      		sendVal5();
+    	}	    
+    	
+    function sendVal6() {		  	
+		  	$.get('/arduino/PINZA/' + value, function(){
+		  		}
+		  	);
+	  	}
+
+	  	function updateVal6(val6) {
+      		value = val6; 
+      		$("#val6").text(value);
+      		sendVal6();
+    	}	     		
+    	
+	</script>	
+
+<style type="text/css">
+	body {
+		text-align: center;
+		margin: 100px 0;
+	}
+	
+	input[type="range"]{
+		outline: none;
+		-webkit-appearance:none; 
+		-moz-apperance:none; 
+		width:60%;
+		height: 10px;
+		-webkit-border-radius:10px; 
+		-moz-border-radius:10px; 
+		-ms-border-radius:10px; 
+		-o-border-radius:10px;
+		background-color: #CCC;
+
+	}
+
+	input::-webkit-slider-thumb{
+		-webkit-appearance:none; 
+		-moz-apperance:none; 
+		width:30px; 
+		height:30px;
+		-webkit-border-radius:30px; 
+		-moz-border-radius:30px; 
+		-ms-border-radius:30px; 
+		-o-border-radius:30px; 
+		border-radius:30px;
+		background: #00B0B3;
+	}
+
+	h1 {
+		font-family: sans-serif;
+		color: #00B0B3;
+		margin: 50px;
+	}
+
+	#val1 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+	
+	#val2 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+	
+	#val3 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+	
+	#val4 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+	
+	#val5 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+
+	#val6 {
+		font-size: 1em;
+		font-family: sans-serif;
+		color: #00B0B3;
+	}
+	
+</style>
+
+</head>
+
+<body>
+		<h4>BASE</h4>
+		<input type="range" min="0" max="180" onchange="updateVal1(this.value);">
+		<p id="val1">0</p>	
+		
+		<h4>SPALLA</h4>
+		<input type="range" min="0" max="180" onchange="updateVal2(this.value);">
+		<p id="val2">0</p>	
+		
+		<h4>GOMITO</h4>
+		<input type="range" min="0" max="180" onchange="updateVal3(this.value);">
+		<p id="val3">0</p>	
+		
+		<h4>POLSO ORIZZONTALE</h4>
+		<input type="range" min="0" max="180" onchange="updateVal4(this.value);">
+		<p id="val4">0</p>	
+		
+		<h4>POLSO VERTICALE</h4>
+		<input type="range" min="0" max="180" onchange="updateVal5(this.value);">
+		<p id="val5">0</p>	
+		
+		<h4>PINZA</h4>
+		<input type="range" min="0" max="180" onchange="updateVal6(this.value);">
+		<p id="val6">0</p>			
+		
+		
+</body>
+
+
+
